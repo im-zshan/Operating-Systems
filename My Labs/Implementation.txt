@@ -1,0 +1,75 @@
+Q1. Write a program that performs the addition of 2 10*10 matrices using 10 seperate threads and storing the same in the 3rd matrix. All the threads should work in such a way in order to maximise the overall performance. In addition, the program should use locks, in order to write correctly into the final matrix.
+
+..
+
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int* matrix1;
+int* matrix2;
+int* result;
+
+void* add_m(void* i) {
+    int row = *(int*)i;
+    for (int col=0; col<10; col++) {
+        *(result+10*row+col) = *(matrix1+10*row+col) + *(matrix2+10*row+col);
+    }
+    return NULL;
+}
+
+int main() {
+    matrix1 = malloc(100*sizeof(int));
+    matrix2 = malloc(100*sizeof(int));
+    result = malloc(100*sizeof(int));
+
+    for (int i=0; i<10; i++) {
+        for (int j=0; j<10; j++) {
+            *(matrix1+10*i+j) = 10*i+j+1;
+        }
+    }
+    
+    for (int i=0; i<10; i++) {
+        for (int j=0; j<10; j++) {
+            printf("%d ", *(matrix1+10*i+j));
+        }
+        printf("\n");
+    }
+
+    for (int i=0; i<10; i++) {
+        for (int j=0; j<10; j++) {
+            *(matrix2+10*i+j) = 10*i+j+1;
+        }
+    }
+    
+    for (int i=0; i<10; i++) {
+        for (int j=0; j<10; j++) {
+            printf("%d ", *(matrix2+10*i+j));
+        }
+        printf("\n");
+    }
+
+    pthread_t threads[10];
+
+    int rows[10];
+    for (int i=0; i<10; i++)
+        rows[i] = i;
+
+    for (int i=0; i<10; i++) {
+        pthread_create(&threads[i], NULL, add_m, &rows[i]);
+    }
+
+    for (int i = 0; i < 10; i++) {
+        pthread_join(threads[i], NULL);
+    }
+
+    for (int i=0; i<10; i++) {
+        for (int j=0; j<10; j++) {
+            printf("%d ", *(result+10*i+j));
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

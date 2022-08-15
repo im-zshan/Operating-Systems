@@ -1,0 +1,36 @@
+Adding Folder to Shared Folders
+...............................................................................................................................
+
+Step 1. Open the VirtualBox 
+    Click on Guest OS (Eg Ubuntu) -> Settings -> Shared Folders -> Add
+    Select Folder Path and check auto-mount and click 'OK'
+    Click 'OK' to save
+    Start the Guest OS
+
+...............................................................................................................................
+
+Installing the Guest Utils:
+"sudo apt install virtualbox-guest-utils"
+
+...............................................................................................................................
+
+Adding User to vboxsf Group:
+"sudo adduser ajmi vboxsf"
+
+...............................................................................................................................
+
+Rebooting for changes to take place:
+"sudo reboot"
+
+...............................................................................................................................
+
+NOTE -> You may find the desktop screen too small but you can solve this easily with "VirtualBox Guest Additions"
+   
+   Guest Additions software provide additional capability to a guest virtual machine, including mouse pointer integration, better video support, share folders, clipboard etc.
+   Before we proceed to install 'Guest Additions' make sure the current user has sudo/root privilege
+   To install Guest Additions; click Devices -> Insert Guest Additions CD image
+   
+   Now prepare to restart the system to enable the change
+   Click 'Shutdown' in the menu and then the 'Restart' button
+   
+   After rebooting Ubuntu, you will see that the desktop resolution is much better

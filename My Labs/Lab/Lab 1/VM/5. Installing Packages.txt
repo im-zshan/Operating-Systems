@@ -1,0 +1,10 @@
+Installing Packages in Ubuntu
+...............................................................................................................................
+
+-> Installing git Package:
+"sudo apt install git"
+
+-> Installing pip Package:
+"sudo apt install python3-pip"
+
+Updates

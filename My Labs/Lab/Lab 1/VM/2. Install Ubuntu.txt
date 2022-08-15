@@ -1,0 +1,32 @@
+Install Ubuntu
+...............................................................................................................................
+
+Step 1. Installing Ubuntu
+    Back to Oracle VM VirtualBox Manager, click on the new Ubuntu virtual machine and hit 'Start' button
+    You will see a 'Welcome' screen. Now, click 'Install Ubuntu' button
+    CLick 'Continue0'
+
+Step 2. Do a Normal Installation
+   Check the Updates
+   Check the third-party softwares
+
+Step 3. Make sure 'Erase disk and install Ubuntu' option is selected
+   Click 'Install Now' button
+   Ubuntu will ask few questions, if you feel default is good, click 'Continue' button
+
+Step 4. Now you'll be asked to setup "Who are you ?"
+   Name: Zeeshan Chowdhary
+   Computer's Name: Zeeshan-VirtualBox
+   Username: imzshan
+   Password: Z33SH4N
+
+Step 5. Click 'Continue' and Installation will start
+   Installing.... Wait...
+
+Step 6. After installation is complete, click 'Restart Now' button
+   You'll see a screen saying 'Please remove installation media and then press ENTER'
+   Enter
+
+Step 7. Enter the password you've chosen and press ENTER
+    
+Step 8. The Ubuntu Desktop OS is now ready to use

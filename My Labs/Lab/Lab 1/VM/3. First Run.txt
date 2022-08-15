@@ -1,0 +1,16 @@
+First Run
+...............................................................................................................................
+
+Step 1. Login
+
+Step 2. Skip -> Next -> Don't Send -> Next -> Done
+
+Step 3. Updates: Remind me later
+
+Step 4. Goto Settings -> Appearances and then Select Dark
+
+Step 5. Goto Settings -> Displays and Set Resolution as 1440 x 900 (16:10)
+
+Step 6. Save and Shut Down
+
+Step 7. Restart

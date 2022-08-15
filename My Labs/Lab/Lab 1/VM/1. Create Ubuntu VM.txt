@@ -1,0 +1,29 @@
+Create Ubuntu VM
+..............................................................................................................................
+
+Step 1. Download a VirtualBox ( https://www.virtualbox.org/ )
+
+Step 2. Tools
+
+Step 3. New
+
+Step 4. Expert Mode
+    Give a Name
+    Allocate atleast 2 GB of memeory size
+    Create a Virtual Hard Drive now
+    CLick on "Create"
+
+Step 5. Create Hard Drive file type
+    Hard Drive Size - 20 GB
+    Choose the default VirtualBox Disk Image (VDI)
+    Change the storage type from the default 'Dynamically Allocated' to 'Fixed Size' to increase the performance.
+    Click on "Create" and  the virtualbox will generate Ubuntu VM
+
+Step 6. Now the Virtual Machine is created and we're ready to install Ubuntu in this VM
+    Select 'New Virtual Machine' and then click on 'Settings'
+    Click on 'Storage' category and then 'Empty' under Controller:IDE
+    Click "CD/DVD" icon on right hand side and select the ubuntu ISO file to mount
+    Click 'OK' button to continue and install 'Ubuntu'
+
+
+Storage -> IDE Secondary Device -> Choose ISO ( Use the latest Ubuntu LTS Version ISO ) -> Start

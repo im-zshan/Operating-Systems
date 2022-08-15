@@ -1,0 +1,88 @@
+Add a Simple Command:
+https://viduniwickramarachchi.medium.com/how-to-add-a-user-program-to-xv6-1209069feee4
+
+......................................................................................
+
+{user/salaam.c}
+
+#include "kernel/types.h"
+#include "kernel/stat.h"
+#include "user/user.h"
+
+int main(int argc, char *argv[]) {
+  if (argc > 1) {
+    printf("Salaam %s! Kaifa Haluka?\n", argv[1]);
+  } else {
+    printf("Salaam Robo! Kaifa Haluka?\n");
+  }
+  exit(0);
+}
+
+......................................................................................
+
+{Makefile}
+
+Add $U/_salaam to UPROGS
+
+......................................................................................
+
+{Add a Simple System Call}
+
+https://www.geeksforgeeks.org/xv6-operating-system-adding-a-new-system-call/
+
+......................................................................................
+
+{kernel/syscall.h}
+
+#define SYS_retint 22
+
+......................................................................................
+
+{kernel/syscall.c}
+
+extern uint64 sys_retint(void);
+and
+[SYS_retint]  sys_retint,
+
+......................................................................................
+
+{kernel/sysproc.c}
+
+uint64
+sys_retint()
+{
+  return 2022;
+}
+
+......................................................................................
+
+{user/usys.pl}
+
+entry("retint");
+
+.......................................................................................
+
+{user/user.h}
+
+int retint(void);
+
+.......................................................................................
+
+{user/retint.c}
+
+#include "kernel/types.h"
+#include "kernel/stat.h"
+#include "user/user.h"
+
+int main(int argc, char *argv[]) {
+  printf("%d\n", retint());
+  exit(0);
+}
+
+........................................................................................
+
+{Makefile}
+
+Add $U/_retint to UPROGS
+
+........................................................................................

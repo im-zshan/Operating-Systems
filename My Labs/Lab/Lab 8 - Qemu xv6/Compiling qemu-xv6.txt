@@ -1,0 +1,55 @@
+Install QEMU:
+https://www.assistedcoding.eu/2017/11/06/install-vx6-operating-system/
+
+.............................................................................................
+
+Install Requirements:
+sudo apt-get install qemu-kvm qemu virt-manager virt-viewer libvirt-daemon-system libvirt-clients make
+
+.............................................................................................
+
+Clone xv6:
+git clone https://github.com/mit-pdos/xv6-public.git
+
+.............................................................................................
+
+Changing Directory:
+cd xv6-public/
+
+.............................................................................................
+
+Editing Makefile:
+gedit Makefile
+and change Line 54 from
+# QEMU = qemu-system-i386
+to
+QEMU = qemu-system-x86_64
+
+.............................................................................................
+
+Compiling xv6:
+make
+
+.............................................................................................
+
+Running xv6:
+make qemu-nox (This cmd is used to run Qemu Inside the terminal only.)
+
+or
+
+make qemu (This cmd is used to run Qemu as an external process in its own shell.)
+
+.............................................................................................
+
+To Quit xv6:
+Ctrl + A, Followed by
+'x'
+
+#Terminated ######
+
+..............................................................................................
+
+Recompile and Run:
+make clean && make && make qemu-nox
+
+.............................................................................................

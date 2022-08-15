@@ -1,0 +1,12 @@
+Topic - To understand the use of Free and Pmap utilities in Linux.
+
+
+Web Resource - https://linoxide.com/linux-memory-analysis-with-free-and-pmap-command/
+
+Commands;
+
+ps l
+top
+
+free -h -t
+pmap -x <PID>

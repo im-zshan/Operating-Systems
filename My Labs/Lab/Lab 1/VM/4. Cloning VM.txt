@@ -1,0 +1,12 @@
+Cloning the Virtual Machine
+...............................................................................................................................
+
+Step 1. Open the VirtualBox and then right click on VM
+
+Step 2. Click on Clone
+
+Step 3. Name: Give some name
+
+Step 4. Clone type: Full clone
+
+Step 5. Click on Clones

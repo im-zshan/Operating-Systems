@@ -1,0 +1,25 @@
+Installing Windows Subsystem for Linux (WSL)
+...............................................................................................................................
+
+Step 1. Open Windows Terminal
+     2. Run "wsl --install"
+     3. Reboot Windows
+     4. Enter Username and Password
+
+     After the Reboot again reopen the Terminal and run;
+
+     5. sudo apt update
+     6. sudo apt full-upgrade
+     7. sudo apt install gedit -y
+     ** sudo apt install adwaita-icon-theme-full
+
+     8. sudo apt install nautilus -y
+     9. sudo apt install x11-apps -y
+    10. Install "Remote - WSL" extension in VS Code (Only for Windows)
+
+...............................................................................................................................
+
+-> Updating the WSL
+
+wsl --update
+wsl --shutdown
