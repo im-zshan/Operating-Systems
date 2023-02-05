@@ -4,7 +4,7 @@ An operating system (OS) is the program that, after being initially loaded into 
 This repository will contain the project codes/system calls based on Assembly Language and xv6.
 
 * System Calls - A system call is a method for a computer program to request a service from the kernel of the operating system on which it is running.
-* XV6 - A much more functional OS that we can absorb its essence by tracing code.
+* xv6 - A much more functional OS that we can absorb its essence by tracing code.
 
 ## Labs of Operating System
 
